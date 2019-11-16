@@ -8,7 +8,7 @@ const app_key = 'ade41765';
   search:  
     async (term) => {
         
- let output = axios.get('https://www.food2fork.com/api/search?key=cf2408379cb20459aa0e766d6690cd8f&q=orange')  .then(function (response) {
+ let output = axios.get('https://financialmodelingprep.com/api/v3/company/profile/XOM')  .then(function (response) {
 		return response;
   })
   .catch(function (error) {
