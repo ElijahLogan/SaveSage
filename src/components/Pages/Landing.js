@@ -22,7 +22,7 @@ const Title = styled.h1`
 const Wrapper = styled.section`
   padding: 4em;
   
-  background-image: url('../images/dinner-party-copy.jpg');
+  background-image: url(https://burst.shopifycdn.com/photos/stock-market-tracking-and-stocks.jpg?width=925&);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

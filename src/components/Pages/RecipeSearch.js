@@ -1,26 +1,63 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar';
-import RecipeList from '../RecipeList/RecipeList';
+import Recipe from '../Recipe/Recipe';
 import Edam from '../util/Edam';
 
 class RecipeSearch extends React.Component {
 
 	 constructor(props){
     super(props)
-    this.state = {recipes:[]}
+    this.state = { company: {
+      ceo:'', 
+      changes:'', 
+      companyName:'', 
+      description:'',
+      exchange:'',
+      image:'',
+      industry:'',
+      mktCap:'',
+      price:'', 
+      range:'', 
+      sector:'', 
+      volAvg:'', 
+      website:'',
+      symbol:''
+    }
+    }
     this.searchEdam = this.searchEdam.bind(this)
   }
-componentWillMount(){
-  this.searchEdam()
+ componentWillMount(){
+  let finance =   Edam.search()
+  finance.then(res => {
+    let symbol= res.data.symbol
+    let profile = res.data.profile
+    let payload = {symbol, ...profile}
+    console.log(payload)
+    this.setState({company:payload})
+    return payload
+  }).then(res => 
+    this.setState({company:res})
+    )
+
+ 
+}
+
+componentDidMount(){
+  console.log(this.state.company)
 }
 
 
 async searchEdam(term){
-  let recipes =  await Edam.search(term)
-  let data = recipes.data.recipes
-    this.setState({recipes:data})
-    console.log(this.state.recipes)
+  //returns object
+  let finance =  await Edam.search(term)
+  return finance
+  
+ 
+ 
+ 
+  
+  
 }
 	
 	
@@ -29,7 +66,8 @@ async searchEdam(term){
 		return (
 			<div>
 			<SearchBar searchEdam = {this.searchEdam}/>
-     	  <RecipeList recipes = {this.state.recipes}/>
+      <Recipe company = {this.state.company} />
+ 
 			</div>
 		);
 	}
