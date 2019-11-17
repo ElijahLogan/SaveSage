@@ -8,7 +8,7 @@ const app_key = 'ade41765';
   search:  
     async (term) => {
         
- let output = axios.get('https://financialmodelingprep.com/api/v3/company/profile/XOM')  .then(function (response) {
+ let output = axios.get('https://financialmodelingprep.com/api/v3/company/profile/APPS')  .then(function (response) {
 		return response;
   })
   .catch(function (error) {
