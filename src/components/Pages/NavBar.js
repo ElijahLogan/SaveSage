@@ -14,12 +14,12 @@ import {Navbar, Nav, NavDropdown, FormControl, Form, Button} from 'react-bootstr
 const NavBar = () => {
     return (
         <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home">Eat Well</Navbar.Brand>
+  <Navbar.Brand href="#home"> Catch Up</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Nav.Link> <Link to ='/'> Home </Link></Nav.Link>
-      <Nav.Link> <Link to = '/recipe-search'> RecipeSearch </Link> </Nav.Link>
+      <Nav.Link> <Link to = '/recipe-search'> Company Search </Link> </Nav.Link>
       <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item> <Link to='questions'> Nutrition Questions </Link> </NavDropdown.Item>
       </NavDropdown>
