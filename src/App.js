@@ -8,6 +8,7 @@ import Nutrition from './components/Pages/Nutrition';
 import RecipeSearch from './components/Pages/RecipeSearch';
 import Landing from './components/Pages/Landing';
 import Edam from './components/util/Edam';
+import Edex from './components/Pages/Edexes'
 import Footer from './components/Pages/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -45,6 +46,7 @@ async searchEdam(term){
                   <Route exact path = '/recipe-search' component = {RecipeSearch} />
                   <Route exact path ='/questions' component={Nutrition}/>
                   <Route exact path ='/health-tips' component={Health}/>
+                  <Route exact path ='/index' component={Edex}/>
                 </Switch>
          </section>
          <Footer/>
