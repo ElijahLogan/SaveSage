@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Jumbotron, Button } from 'react-bootstrap';
+import Card from "react-bootstrap/Card"
 import styled from 'styled-components';
 
 //link will replace href
@@ -22,8 +23,8 @@ margin: 1em;
 padding: 0.25em 1em;
 border: 2px solid gray
 border-radius: 3px;
-width:30vw;
-height:10vh;
+width:12rem;
+height:15rem;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -32,19 +33,23 @@ align-items:center;
 //return that index's information
 const Index_Info = styled.section`
  color: palevioletred;
- font-size: 1em;
+ font-size: 0.3em;
  margin: 1em;
  padding: 0.25em 1em;
  border: 2px solid gray
  border-radius: 3px;
- width:50vw;
- height:50vh
+ width:10vw;
+ height:10vh
  display:flex;
  justify-content:center;
  align-items:center;
 `;
 
-
+const Ticker = styled.div`
+width:30vw
+height:50vh;
+backgroundColor:red;
+`;
 
 
 
@@ -58,20 +63,46 @@ function Index_Name({ props }) {
     let holder = display
     holder = holder ? false : true
     setDisplay(holder)
+    console.log(display)
 
   }
   //return the index namee
-  if (true) {
+  if (display) {
     return (
       <Fragment>
-        <Index_Wrapper onClick={changeDisplay}>
-          {props.ticker}
-        </Index_Wrapper>
+        <Card style={{ width: '18rem' }} onClick={changeDisplay}>
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Title>{props.indexName}</Card.Title>
+            <Card.Text>
+              information on the {props.indexName}
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
       </Fragment>
     )
   }
   return (
-    <Index_Info onClick={changeDisplay}> hello </Index_Info>
+    <Fragment>
+      <Card style={{ width: '18rem' }} onClick={changeDisplay}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title> Index Ticker {props.ticker}</Card.Title>
+          <Card.Text>
+            changes: {props.changes}
+            <br></br>
+            current price:   ${props.price}
+
+
+
+
+            {}
+          </Card.Text>
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
+    </Fragment>
   )
 
 

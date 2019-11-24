@@ -2,6 +2,21 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Edam from '../util/Edam';
 import Edex from '../Pages/Edexes';
+import styled from 'styled-components';
+
+
+
+const Index_div = styled.div`
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:red;
+  overflow:scroll;
+
+`;
 
 class MajorIndex extends React.Component {
 
@@ -42,11 +57,13 @@ class MajorIndex extends React.Component {
     let indexs = this.state.company;
     return (
       <div>
-        {indexs.map((index) => {
-          return <Edex props={index} />
-        }
+        <Index_div>
+          {indexs.map((index) => {
+            return <Edex props={index} />
+          }
 
-        )}
+          )}
+        </Index_div>
       </div>
     );
   }
