@@ -1,8 +1,7 @@
-import React, { useState }from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import Recipe from '../Recipe/Recipe';
-import RecipeList from '../RecipeList/RecipeList';
 import Edam from '../util/Edam';
+import Edex from '../Pages/Edexes';
 
 class MajorIndex extends React.Component {
 
@@ -13,47 +12,46 @@ class MajorIndex extends React.Component {
     }
     this.searchEdam = this.searchEdam.bind(this)
   }
+
+
   componentWillMount() {
-    let majorIndexes = Edam.search()
+    let majorIndexes = Edam.search_index()
     majorIndexes.then(res => {
 
-      console.log(majorIndexes)
-
-    }).then()
-
-
-  }
-
-  componentDidMount() {
+      //array of index
+      let indexes = res.data.majorIndexesList
+      this.setState({ company: indexes })
+      console.log(this.state.company)
+    })
 
   }
+
 
 
   async searchEdam(term) {
-    const [name, setName] = useState([]);
 
-    
+
     //returns object
     let finance = await Edam.search(term)
     return finance
-
-
-
-
-
-
   }
 
 
   // React components are simple functions that take in props and state, and render HTML
   render() {
+    let indexs = this.state.company;
     return (
       <div>
-        <h1> hello</h1>
+        {indexs.map((index) => {
+          return <Edex props={index} />
+        }
 
+        )}
       </div>
     );
   }
+
+  //end  of class3
 }
 
 export default MajorIndex
