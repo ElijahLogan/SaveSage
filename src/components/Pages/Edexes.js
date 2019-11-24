@@ -23,7 +23,7 @@ padding: 0.25em 1em;
 border: 2px solid gray
 border-radius: 3px;
 width:30vw;
-height:10vh
+height:10vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -49,7 +49,7 @@ const Index_Info = styled.section`
 
 
 
-function Index_Name() {
+function Index_Name({ props }) {
   const [display, setDisplay] = useState(true);
   const [index, setIndex] = useState(175);
 
@@ -61,11 +61,11 @@ function Index_Name() {
 
   }
   //return the index namee
-  if (display) {
+  if (true) {
     return (
       <Fragment>
         <Index_Wrapper onClick={changeDisplay}>
-          {display}
+          {props.ticker}
         </Index_Wrapper>
       </Fragment>
     )
