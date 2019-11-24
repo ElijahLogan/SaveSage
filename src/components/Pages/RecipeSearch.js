@@ -1,76 +1,75 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar';
 import Recipe from '../Recipe/Recipe';
 import Edam from '../util/Edam';
 
 class RecipeSearch extends React.Component {
 
-	 constructor(props){
+  constructor(props) {
     super(props)
-    this.state = { company: {
-      ceo:'', 
-      changes:'', 
-      companyName:'', 
-      description:'',
-      exchange:'',
-      image:'',
-      industry:'',
-      mktCap:'',
-      price:'', 
-      range:'', 
-      sector:'', 
-      volAvg:'', 
-      website:'',
-      symbol:''
-    }
+    this.state = {
+      company: {
+        ceo: '',
+        changes: '',
+        companyName: '',
+        description: '',
+        exchange: '',
+        image: '',
+        industry: '',
+        mktCap: '',
+        price: '',
+        range: '',
+        sector: '',
+        volAvg: '',
+        website: '',
+        symbol: ''
+      }
     }
     this.searchEdam = this.searchEdam.bind(this)
   }
- componentWillMount(){
-  let finance =   Edam.search()
-  finance.then(res => {
-    let symbol= res.data.symbol
-    let profile = res.data.profile
-    let payload = {symbol, ...profile}
-    console.log(payload)
-    this.setState({company:payload})
-    return payload
-  }).then(res => 
-    this.setState({company:res})
-    )
-
- 
-}
-
-componentDidMount(){
-  console.log(this.state.company)
-}
+  componentWillMount() {
+    let finance = Edam.search('MSFT')
+    finance.then(res => {
+      let symbol = res.data.symbol
+      let profile = res.data.profile
+      let payload = { symbol, ...profile }
+      console.log(payload)
+      this.setState({ company: payload })
+      return payload
+    })
 
 
-async searchEdam(term){
-  //returns object
-  let finance =  await Edam.search(term)
-  return finance
-  
- 
- 
- 
-  
-  
-}
-	
-	
-	// React components are simple functions that take in props and state, and render HTML
-	render() {
-		return (
-			<div>
-			<SearchBar searchEdam = {this.searchEdam}/>
-      <Recipe company = {this.state.company} />
- 
-			</div>
-		);
-	}
+  }
+
+  componentDidMount() {
+    console.log(this.state.company)
+  }
+
+
+  async searchEdam(term) {
+    //returns object
+    let finance = await Edam.search(term)
+    return finance
+
+
+
+
+
+
+  }
+
+
+  // React components are simple functions that take in props and state, and render HTML
+  render() {
+    return (
+      <div>
+        <SearchBar searchEdam={this.searchEdam} />
+        <Recipe company={this.state.company} />
+
+      </div>
+    );
+  }
 }
 
 export default RecipeSearch
