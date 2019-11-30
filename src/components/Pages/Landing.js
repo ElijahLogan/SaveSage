@@ -24,7 +24,7 @@ const Title = styled.h1`
 const Wrapper = styled.section`
   padding: 4em;
   
- background-color: hsl(55, 37%, 40%);
+ background-color: hsl(55, 37%, 40%);ç
 
   background-position: center center;
   background-repeat: no-repeat;
