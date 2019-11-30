@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import Health from './Health';
@@ -12,8 +12,22 @@ import { Navbar, Nav, NavDropdown, FormControl, Form, Button } from 'react-boots
 //link will replace href
 
 const NavBar = () => {
+  const [color, setColor] = useState(true)
+
+
+
+  const toggleHover = () => setColor(!color)
+
+  let linkStyle;
+  if (color) {
+    linkStyle = { backgroundColor: 'hsl(147, 64%, 61%)' }
+  } else {
+    linkStyle = { backgroundColor: 'white' }
+  }
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar style={linkStyle}
+      onMouseEnter={toggleHover} onMouseLeave={toggleHover} onScroll ={toggleHover}
+      expand="lg">
       <Navbar.Brand href="#home"><Link to='/'> Save Sage </Link> </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
