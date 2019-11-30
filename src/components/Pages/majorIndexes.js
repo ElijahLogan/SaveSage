@@ -7,13 +7,12 @@ import styled from 'styled-components';
 
 
 const Index_div = styled.div`
-  width:100vw;
+  width:100%
   height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
-  background:red;
+  margin-top:1rem;
   overflow:scroll;
 
 `;
@@ -35,8 +34,9 @@ class MajorIndex extends React.Component {
 
       //array of index
       let indexes = res.data.majorIndexesList
+      console.log(indexes)
       this.setState({ company: indexes })
-      console.log(this.state.company)
+      
     })
 
   }
@@ -49,6 +49,7 @@ class MajorIndex extends React.Component {
     //returns object
     let finance = await Edam.search(term)
     return finance
+    
   }
 
 

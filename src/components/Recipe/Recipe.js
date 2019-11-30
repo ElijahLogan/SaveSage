@@ -21,7 +21,8 @@ class Recipe extends React.Component{
   <h2>{this.props.company.companyName}</h2>
   <div className="Recipe-information">
     <div className="Recipe-address">
-      <p>{this.props.company.ceo}</p>
+      <p>CEO {this.props.company.ceo}</p>
+      <br/>
       <p>{this.props.company.exchange}</p>
       
     </div>

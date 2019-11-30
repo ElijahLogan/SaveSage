@@ -50,8 +50,14 @@ class RecipeSearch extends React.Component {
   async searchEdam(term) {
     //returns object
     let finance = await Edam.search(term)
-    return finance
-
+   
+      let symbol = finance.data.symbol
+      let profile = finance.data.profile
+      let payload = { symbol, ...profile }
+     
+      this.setState({ company: payload })
+     
+ 
 
 
 
@@ -65,7 +71,13 @@ class RecipeSearch extends React.Component {
     return (
       <div>
         <SearchBar searchEdam={this.searchEdam} />
-        <Recipe company={this.state.company} />
+
+        <div className = 'company_view'> 
+          <Recipe company={this.state.company} />
+        </div>
+
+      
+       
 
       </div>
     );

@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import {Link} from 'react-router-dom';
 import {Carousel} from 'react-bootstrap'
 //link will replace href
 
 const Nutrition = () => {
     return (
-        <div>
-           <Carousel>
-  <Carousel.Item>
+        <Fragment>
+           <Carousel >
+  <Carousel.Item style = {{height:'30vh', marginBottom:'14rem'}}>
     <img
       className="d-block w-100"
       src="https://picsum.photos/id/53/1920/1920"
@@ -18,7 +18,7 @@ const Nutrition = () => {
       <p>Find meals that fit into your diet and taste good for you</p>
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item>
+  <Carousel.Item style = {{height:'30vh', marginBottom:'14rem'}} > 
     <img
       className="d-block w-100"
       src="https://picsum.photos/id/43/1920/1920"
@@ -30,7 +30,7 @@ const Nutrition = () => {
       <p>Find meals you can make with the ingredients near you</p>
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item>
+  <Carousel.Item style = {{height:'30vh', marginBottom:'14rem'}} >
     <img
       className="d-block w-100"
       src="https://picsum.photos/id/22/1920/1920"
@@ -43,7 +43,7 @@ const Nutrition = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel> 
-        </div>
+        </Fragment>
     )
 }
 

@@ -22,10 +22,13 @@ input:focus {
   justify-content: center;
   overflow: hidden;
   background: #000;
+  box-shadow: 2px 7px #888888;
+  
 }
 
 .image-container img {
   width: 100%;
+
 }
 
 /* App Styles */
@@ -39,5 +42,20 @@ h1 {
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 1.8rem;
-  color: #fff;
+  color: black;
+}
+
+/*
+
+
+*/
+
+@media only screen and (min-width: 1024px) {
+  .company_view {
+    widows: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+  }
 }

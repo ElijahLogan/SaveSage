@@ -17,12 +17,15 @@ const Title = styled.h1`
   color: red;
 `;
 
+
+
 // Create a <Wrapper> react component that renders a <section> with
 // some padding and a papayawhip background
 const Wrapper = styled.section`
   padding: 4em;
   
-  background-image: url(https://burst.shopifycdn.com/photos/stock-market-tracking-and-stocks.jpg?width=925&);
+ background-color: hsl(55, 37%, 40%);
+
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

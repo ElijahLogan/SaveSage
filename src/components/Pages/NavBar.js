@@ -14,7 +14,7 @@ import { Navbar, Nav, NavDropdown, FormControl, Form, Button } from 'react-boots
 const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home"> Catch Up</Navbar.Brand>
+      <Navbar.Brand href="#home"><Link to='/'> Save Sage </Link> </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
