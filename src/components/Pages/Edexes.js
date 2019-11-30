@@ -70,13 +70,13 @@ function Index_Name({ props }) {
   if (display) {
     return (
       <Fragment>
-        <Card style={{ width: '18rem', marginBottom:'1rem',  boxShadow:' 2px 7px #888888'}} onClick={changeDisplay}>
+        <Card style={{ width: '18rem', marginBottom:'1rem', backgroundColor:'hsl(143, 61%, 73%)', boxShadow:' 2px 7px #888888'}} onClick={changeDisplay}>
           <Card.Body>
             <Card.Title>{props.indexName}</Card.Title>
             <Card.Text>
               information on the {props.indexName}
             </Card.Text>
-            <Button variant="primary">check price</Button>
+            <Button variant="primary" style = {{backgroundColor:'hsl(210, 91%, 22%)'}}> check price</Button>
           </Card.Body>
         </Card>
       </Fragment>
@@ -97,7 +97,7 @@ function Index_Name({ props }) {
 
             {}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary" style = {{backgroundColor:'hsl(168, 46%, 40%)'}} >Go back</Button>
         </Card.Body>
       </Card>
     </Fragment>

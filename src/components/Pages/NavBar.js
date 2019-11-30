@@ -20,13 +20,19 @@ const NavBar = () => {
 
   let linkStyle;
   if (color) {
-    linkStyle = { backgroundColor: 'hsl(147, 64%, 61%)' }
+    linkStyle = {
+      transition: 'background-color 0.5s ease',
+      backgroundColor: 'hsl(147, 64%, 61%)'
+    }
   } else {
-    linkStyle = { backgroundColor: 'white' }
+    linkStyle = {
+      backgroundColor: 'white',
+      transition: 'background-color 0.5s ease'
+    }
   }
   return (
     <Navbar style={linkStyle}
-      onMouseEnter={toggleHover} onMouseLeave={toggleHover} onScroll ={toggleHover}
+      onMouseEnter={toggleHover} onMouseLeave={toggleHover} onScroll={toggleHover}
       expand="lg">
       <Navbar.Brand href="#home"><Link to='/'> Save Sage </Link> </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
