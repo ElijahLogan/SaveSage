@@ -16,20 +16,12 @@ input:focus {
 
 /* Reusable Component - Image Container */
 
-.image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 2px 7px #888888;
-  
-}
 
-.image-container img {
-  width: 100%;
 
-}
+
+
+
+
 
 /* App Styles */
 
@@ -59,7 +51,7 @@ h1 {
 
 
 .text-container{
-  background-color: red;
+  background-color:  hsl(147, 64%, 61%);
   height:100%;
   display:flex;
   align-items: center;
@@ -80,8 +72,38 @@ h1 {
     line-height: 1;
 }
 
-.image-container{
-  background-color: #000;
+
+
+
+.image-container {
+     background-color: hsl(147, 64%, 61%);
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-photo{
+   
+  background-image: url(https://marketplace.canva.com/MADGx44SSKM/4/screen_2x/canva-six-20-pound-euro-MADGx44SSKM.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width:80%;
+  height:60%;
+}
+
+
+.cover-photo-two{
+   
+  background-image: url(https://marketplace.canva.com/MADFFEMxTVE/1/screen_2x/canva-woman-studying-photos-MADFFEMxTVE.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width:80%;
+  height:60%;
 }
 /*
 media query for when the screen is large
@@ -90,10 +112,28 @@ media query for when the screen is large
 
 @media only screen and (min-width: 1024px) {
   .company_view {
-    widows: 100%;
+    width: 100%;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .landing{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+ 
+  .cover-photo{
+    height:80%;
+    width:90%;
+  }
+  
+  .cover-photo-two{
+    height:80%;
+    width:90%;
   }
 }

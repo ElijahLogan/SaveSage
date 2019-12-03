@@ -41,9 +41,6 @@ const NavBar = () => {
           <Nav.Link> <Link to='/'> Home </Link></Nav.Link>
           <Nav.Link> <Link to='/recipe-search'> Company Search </Link> </Nav.Link>
           <Nav.Link> <Link to='/major-indexs'> Major Indexs </Link> </Nav.Link>
-          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item> <Link to='questions'> Nutrition Questions </Link> </NavDropdown.Item>
-          </NavDropdown>
         </Nav>
 
       </Navbar.Collapse>
