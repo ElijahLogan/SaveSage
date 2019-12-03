@@ -4,54 +4,29 @@ import { Jumbotron, Button } from 'react-bootstrap';
 
 
 
-import styled from 'styled-components';
-
-
-//link will replace href
-
-// Create a <Title> react component that renders an <h1> which is
-// centered, palevioletred and sized at 1.5em
-const Title = styled.h1`
-  font-size: 5.5em;
-  text-align: center;
-  color: red;
-`;
-
-
-
-// Create a <Wrapper> react component that renders a <section> with
-// some padding and a papayawhip background
-const Wrapper = styled.section`
-  padding: 4em;
-  
- background-color: hsl(147, 64%, 61%);
-
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-
-
-  height:80vh;
-  width:100vw;
-`;
 
 
 
 const Landing = () => {
   return (
-    <Wrapper>
-      <Title>
-        Grow your wealth
-      </Title>
-    </Wrapper>
+    <section className='landing'>
+      <div className='text-container'>
+
+        <div className='text-box'>
+          <h1 className='hero_content'>Make your side hustle your main hustle</h1>
+
+          <p>
+            Our all in one marketing platform gives you the tools to find the right customers, build your audience, and bring your brand to life
+</p>
+        </div>
+
+
+      </div>
+      <div className='image-container'>
+
+      </div>
+
+    </section>
   )
 }
 
