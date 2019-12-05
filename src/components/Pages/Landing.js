@@ -14,10 +14,10 @@ const Landing = () => {
     <div className='text-container'>
 
       <div className='text-box'>
-        <h1 className='hero_content'>Make your side hustle your main hustle</h1>
+        <h1 className='hero_content'>Don't lose your money. Grow your money</h1>
 
         <p>
-          Our all in one marketing platform gives you the tools to find the right customers, build your audience, and bring your brand to life
+          Our all in one Savings platform gives you the tools to find the right companies, build your portfolio, and bring your financial goals to life
         </p>
       </div>
 
@@ -51,7 +51,7 @@ const Landing = () => {
     <div className='text-container'>
 
       <div className='text-box'>
-        <h1 className='hero_content'>Make your side hustle your main hustle</h1>
+        <h1 className='hero_content'>Learn about smart saving and investment</h1>
 
         <p>
           Our all in one marketing platform gives you the tools to find the right customers, build your audience, and bring your brand to life

@@ -40,7 +40,6 @@ h1 {
 
 
 .landing{
-  height:100vh;
   width:100%;
   display:grid;
 
@@ -66,7 +65,7 @@ h1 {
 .hero-content{
     color: #241c15;
     font-family: Cooper,Georgia,Times,Times New Roman,serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: -.03125rem;
     line-height: 1;
@@ -106,13 +105,19 @@ h1 {
 
 .cover-photo-two{
    
-  background-image: url(https://marketplace.canva.com/MADFFEMxTVE/1/screen_2x/canva-woman-studying-photos-MADFFEMxTVE.jpg);
+  background-image: url(https://marketplace.canva.com/MADGx-V23ss/4/thumbnail_large/canva-brass-round-7-stack-coins-MADGx-V23ss.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   width:80%;
   height:60%;
+}
+
+#sticky-footer p{
+  margin-top:1rem;
+  text-align:center;
+  vertical-align: middle;
 }
 /*
 media query for when the screen is large
@@ -127,9 +132,20 @@ media query for when the screen is large
     justify-content:center;
     align-items: center;
   }
+  .landing{
+    height:100vh;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
+   .company_view {
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+  }
+ 
   .landing{
     display: grid;
     grid-template-columns: 1fr;
@@ -145,4 +161,26 @@ media query for when the screen is large
     height:80%;
     width:90%;
   }
+  
+  .image-container {
+    background-color: hsl(147, 64%, 61%);
+    height:50vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#sticky-footer{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-content:end;
+}
+
+#sticky-footer p{
+  margin-top:1rem;
+  text-align:center;
+  vertical-align: middle;
+}
 }

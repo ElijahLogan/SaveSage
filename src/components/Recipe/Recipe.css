@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: center;
   width: 16.66rem;
-  margin: 1.4rem .5rem 2.3rem 3rem;
+  margin-top: 1.4rem;
+  margin-bottom:2.3rem;
 }
 
 .Recipe .image-container-recipe {
   height: 16.66rem;
-  margin-bottom: 1rem;
 }
 
 .Recipe h2 {
@@ -29,11 +29,19 @@
   line-height: 1rem;
 }
 
+.recipe-address{
+  
+}
 .Recipe-address p {
   font-size:1rem;
   margin:0;
-  
+  font-weight: 600;
 }
+
+.Recipe-address p:nth-of-type(2) {
+  margin-bottom: 1.3rem;
+}
+
 .Recipe-reviews {
   display: flex;
   flex-direction: column;
