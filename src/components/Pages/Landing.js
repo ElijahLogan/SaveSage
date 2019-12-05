@@ -24,7 +24,7 @@ const Landing = () => {
     </div>
     { /* seperation between text and imae container */}
 
-    <div className='image-container'>
+    <div className='image-container' >
 
       <div className='cover-photo'>
 
@@ -38,9 +38,9 @@ const Landing = () => {
 
     { /* seperation between text and imae container */}
 
-    <div className='image-container'>
+    <div className='image-container' id ="color">
 
-      <div className='cover-photo-two'>
+      <div className='cover-photo-two' >
 
       </div>
 
@@ -48,13 +48,13 @@ const Landing = () => {
 
     { /* seperation between text and imae container */}
 
-    <div className='text-container'>
+    <div className='text-container'id ="color">
 
       <div className='text-box'>
         <h1 className='hero_content'>Learn about smart saving and investment</h1>
 
         <p>
-          Our all in one marketing platform gives you the tools to find the right customers, build your audience, and bring your brand to life
+         Your money should work for you. Look forward to articles that will help you make better informed decisions about how you grow your money 
         </p>
       </div>
 
