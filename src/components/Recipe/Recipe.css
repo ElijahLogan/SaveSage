@@ -15,11 +15,12 @@
   margin-bottom: .5rem;
   font-size: 1.2rem;
   font-weight: 600;
+  justify-self: stretch;
 }
 
 .Recipe-information {
   display: flex;
-  justify-content: space-between;
+  justify-content:center ;
 }
 
 .Recipe-information p {
