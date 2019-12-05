@@ -11,14 +11,14 @@ class Recipe extends React.Component {
   }
   render() {
     return (
-      <div className="Recipe" style={{ backgroundColor: 'hsl(168, 46%, 40%)' }}>
-        <div className="image-container">
+      <div className="Recipe" style={{  backgroundImage: 'linear-gradient(to right,#212529 , #5cdb95)'}}>
+        <div className="image-container-recipe">
           <a href={this.props.company.website}>
             <img src={this.props.company.image} alt='' />
           </a>
         </div>
         <h1>{this.props.company.symbol}</h1>
-        <h2>{this.props.company.companyName}</h2>
+        <h2 className = "CompanyName">{this.props.company.companyName}</h2>
         <div className="Recipe-information" >
           <div className="Recipe-address">
             <p style={{}}>CEO: {this.props.company.ceo}</p>
