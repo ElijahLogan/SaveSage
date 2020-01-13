@@ -31,8 +31,8 @@ const NavBar = () => {
     }
   }
   return (
-    <Navbar style={linkStyle}
-      onMouseEnter={toggleHover} onMouseLeave={toggleHover} onScroll={toggleHover}
+    <Navbar style={linkStyle} sticky="top" 
+      onMouseEnter={toggleHover} onMouseLeave={toggleHover} onScroll={toggleHover} onTap={toggleHover} 
       expand="lg">
       <Navbar.Brand href="#home"><Link to='/'> Save Sage </Link> </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
