@@ -70,21 +70,20 @@ function Index_Name({ props }) {
   if (display) {
     return (
       <Fragment>
-        <Card style={{ width: '18rem', marginBottom:'1rem', backgroundColor:'hsl(143, 61%, 73%)', boxShadow:' 2px 7px #888888'}} onClick={changeDisplay}>
-          <Card.Body>
-            <Card.Title>{props.indexName}</Card.Title>
-            <Card.Text>
-              information on the {props.indexName}
-            </Card.Text>
-            <Button variant="primary" style = {{backgroundColor:'hsl(210, 91%, 22%)'}}> check price</Button>
-          </Card.Body>
-        </Card>
+        <div class="card" style={{ width: '18rem', marginBottom: '1rem', backgroundColor: 'hsl(143, 61%, 73%)', boxShadow: ' 2px 7px #888888' }}>
+          <div class="card-body">
+            <h5 class="card-title">{props.indexName}</h5>
+            <p class="card-text">    information  on {props.indexName}  </p>
+            <a href="#" class="btn btn-primary" onClick={changeDisplay}> check price</a>
+
+          </div>
+        </div>
       </Fragment>
     )
   }
   return (
     <Fragment>
-      <Card style={{ width: '18rem', marginBottom:'1rem'}} onClick={changeDisplay}>
+      <Card style={{ width: '18rem', marginBottom: '1rem' }} onClick={changeDisplay}>
         <Card.Body>
           <Card.Title> Index Ticker {props.ticker}</Card.Title>
           <Card.Text>
@@ -97,7 +96,7 @@ function Index_Name({ props }) {
 
             {}
           </Card.Text>
-          <Button variant="primary" style = {{backgroundColor:'hsl(168, 46%, 40%)'}} >Go back</Button>
+          <Button variant="primary" style={{ backgroundColor: 'hsl(168, 46%, 40%)' }} >Go back</Button>
         </Card.Body>
       </Card>
     </Fragment>
@@ -111,3 +110,68 @@ function Index_Name({ props }) {
 
 
 export default Index_Name;
+
+
+/*
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{props.indexName}</h5>
+    <p class="card-text">    information  on {props.indexName}  </p>
+    <a href="#" class="btn btn-primary" onClick={changeDisplay}> check price</a>
+  </div>
+</div>
+*/
+
+
+/*
+old card
+  <Fragment>
+        <Card style={{ width: '18rem', marginBottom:'1rem', backgroundColor:'hsl(143, 61%, 73%)', boxShadow:' 2px 7px #888888'}} onClick={changeDisplay}>
+          <Card.Body>
+            <Card.Title>{props.indexName}</Card.Title>
+            <Card.Text>
+              information on the {props.indexName}
+            </Card.Text>
+            <Button variant="primary" style = {{backgroundColor:'hsl(210, 91%, 22%)'}}> check price</Button>
+          </Card.Body>
+        </Card>
+      </Fragment>
+    )
+
+*/
+
+/*
+   TAKEN OUT AT 11:17
+   JAN 31ST 2020
+
+   TOP
+           <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{props.indexName}</h5>
+            <p class="card-text">    information  on {props.indexName}  </p>
+            <a href="#" class="btn btn-primary" onClick={changeDisplay}> check price</a>
+          </div>
+        </div>
+        ----
+  Bottom
+      <Card style={{ width: '18rem', marginBottom: '1rem' }} onClick={changeDisplay}>
+        <Card.Body>
+          <Card.Title> Index Ticker {props.ticker}</Card.Title>
+          <Card.Text>
+            changes: {props.changes}
+            <br></br>
+            current price:   ${props.price}
+
+
+
+
+            {}
+          </Card.Text>
+          <Button variant="primary" style={{ backgroundColor: 'hsl(168, 46%, 40%)' }} >Go back</Button>
+        </Card.Body>
+      </Card>
+
+
+
+*/

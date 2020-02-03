@@ -1,12 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
+import { Jumbotron, Button } from 'react-bootstrap';
+import Card from "react-bootstrap/Card"
 import { Link } from 'react-router-dom';
 import Edam from '../util/Edam';
 import Edex from '../Pages/Edexes';
 import styled from 'styled-components';
 
+const Index_div = styled.div`
+  width:100%
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:1rem;
+  overflow:scroll;
+
+`;
 
 function MajorIndex2() {
     const [indexes, setIndex] = useState([]);
+
 
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
@@ -17,6 +30,7 @@ function MajorIndex2() {
             //array of index
             let res_indexes = res.data.majorIndexesList
             console.log(res_indexes)
+            console.log("res indexes")
 
             setIndex(res_indexes)
         })
@@ -24,14 +38,11 @@ function MajorIndex2() {
     }, []);
 
     return (
-        <div>
+        <Index_div>
             {indexes.map((index) => {
-                return <h1> {index.indexName}</h1>
-            }
-
-            )}
-            <h1>working?</h1>
-        </div>
+                return (<Edex props={index} />)
+            })}
+        </Index_div>
     )
 
 }
